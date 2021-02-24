@@ -31,7 +31,7 @@ int main()
                                 cout << "The pendulum reaches the amplitude deviation in: " << t << " \n";
             }
             else {
-                cout << "Mistake! This value cannot be omitted! \n";
+                cout << "Mistake! This value cannot be omitted! Restart and write only numbers :) \n";
                 break;
             }
         
