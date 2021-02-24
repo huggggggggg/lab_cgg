@@ -13,13 +13,13 @@ int main()
 	cout << "The product is: " << result;
 }
 
-int scan_int(){ // Получение целого значения
+int scan_int(){ 
 
 	while (true){
 
 		int input_data;
 		cin >> input_data;
-			if (cin.fail() || input_data < 0){ // Проверка на целое число с диапазоном от -32768 до 32767
+			if (cin.fail() || input_data < 0){ 
 				cout << "Invalid value entered. Try again: \n";
 				cin.clear();
 				cin.ignore(32767, '\n');
