@@ -1,33 +1,34 @@
 ﻿#include <iostream>
 #include <cmath> 
-
 using namespace std;
-int scan_int();
+
+int verify_value();
 double endless_row(int);
+
 
 int main()
 {
-	cout << "Enter the upper bound (integer): ";
+	cout << "Enter the upper bound: "
 	int n = scan_int();
 	double result = endless_row(n);
 	cout << "The product is: " << result;
 }
 
-int scan_int(){ 
-
+int verify_value(){ 
+	
 	while (true){
 
-		int input_data;
-		cin >> input_data;
-			if (cin.fail() || input_data < 0){ 
-				cout << "Invalid value entered. Try again: \n";
-				cin.clear();
-				cin.ignore(32767, '\n');
-			}
-			else{
-				return input_data;
-			}
+		int entered_value;
+		cin >> entered_value;
+		if (cin.fail() || entered_value < 0){
+		cout << "Invalid value entered. Try again: \n";
+			cin.clear();
+			cin.ignore(32767, '\n');
 		}
+		else{
+			return entered_value;
+		}
+	}
 }
 
 double endless_row(int n){
