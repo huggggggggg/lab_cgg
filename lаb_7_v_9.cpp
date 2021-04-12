@@ -31,14 +31,20 @@ double verify_value();
             Obj.y = verify_value();
             cout << "z = ";
             Obj.z = verify_value();
+            
+            if (Obj.x == 0 && Obj.y == 0 && Obj.z == 0)
+            {
+                cout << "The modulus of a three-dimensional space is equal to 0.";
+                return 0;
+            }
         } 
-        
-        while (Obj.x == -1 && Obj.y == -1 && Obj.z == -1);
+
+        while (Obj.x == 0 && Obj.y == 0 && Obj.z == 0);
         Obj.modul();
-        if (Obj.a > -1)
+        if (Obj.a > 0)
         {
             cout << "The modulus of a three-dimensional space is equal to " << Obj.a << ".";
-            return 0;        
+            return 0;
         }
     }
 
